@@ -1,0 +1,661 @@
+.main-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  width: 100vw;
+  padding: 0 10vw;
+  color: #fff;
+  z-index: 1;
+  transition: .4s ease-out; }
+  .main-header .logo {
+    display: block;
+    background: rgba(255, 255, 0, 0.5);
+    text-align: center;
+    width: 120px; }
+    .main-header .logo span {
+      color: purple; }
+    .main-header .logo .yellow {
+      color: rgba(255, 255, 0, 0.8); }
+    .main-header .logo img {
+      width: 30%; }
+  .main-header a {
+    text-decoration: none;
+    color: inherit;
+    text-transform: uppercase; }
+  .main-header .nav-links {
+    display: flex;
+    list-style: none; }
+    .main-header .nav-links .nav-link {
+      transition: opacity 0.4s ease-in-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .main-header .nav-links .nav-link:nth-of-type(2) {
+        transition-delay: .1s; }
+      .main-header .nav-links .nav-link:nth-of-type(3) {
+        transition-delay: .2s; }
+      .main-header .nav-links .nav-link:nth-of-type(4) {
+        transition-delay: .3s; }
+      .main-header .nav-links .nav-link a {
+        margin: .2rem;
+        padding: 1rem .5rem; }
+      .main-header .nav-links .nav-link a:hover {
+        background: rgba(128, 0, 128, 0.7);
+        color: yellow; }
+  .main-header .menu-icon {
+    position: relative;
+    padding: 26px 10px;
+    cursor: pointer;
+    z-index: 1;
+    display: none; }
+    .main-header .menu-icon__line {
+      display: block;
+      position: relative;
+      background: #fff;
+      height: 2px;
+      width: 20px;
+      border-radius: 4px;
+      transition: background .8s ease; }
+      .main-header .menu-icon__line::before, .main-header .menu-icon__line::after {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border-radius: 4px;
+        background: #fff;
+        transition: background .8s ease; }
+      .main-header .menu-icon__line::before {
+        transform: translateY(-5px); }
+      .main-header .menu-icon__line::after {
+        transform: translateY(5px); }
+  .main-header .menu-btn {
+    position: absolute;
+    top: -100px; }
+    .main-header .menu-btn:focus ~ .menu-icon .menu-icon__line::before {
+      transform: translateY(-7px); }
+    .main-header .menu-btn:focus ~ .menu-icon .menu-icon__line::after {
+      transform: translateY(7px); }
+  .main-header.scrolled {
+    height: 50px;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff; }
+    .main-header.scrolled .menu-icon__line, .main-header.scrolled .menu-icon__line::before, .main-header.scrolled .menu-icon__line::after {
+      background: #fff; }
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.6); }
+  to {
+    box-shadow: 0 0 0 1000px rgba(255, 255, 255, 0);
+    background: rgba(255, 255, 255, 0); } }
+
+@keyframes openTop {
+  0% {
+    transform: translateY(-5px) rotate(0deg); }
+  50% {
+    transform: translateY(0px) rotate(0deg); }
+  100% {
+    transform: translateY(0px) rotate(90deg); } }
+
+@keyframes closedTop {
+  0% {
+    transform: translateY(-5px) rotate(0deg); }
+  50% {
+    transform: translateY(0px) rotate(0deg); }
+  100% {
+    transform: translateY(0px) rotate(90deg); } }
+
+@keyframes openMid {
+  50% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(45deg); } }
+
+@keyframes closedMid {
+  50% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(45deg); } }
+
+@keyframes openBtm {
+  0% {
+    transform: translateY(5px) rotate(0deg); }
+  50% {
+    transform: translateY(0px) rotate(0deg); }
+  100% {
+    transform: translateY(0px) rotate(90deg); } }
+
+@keyframes closedBtm {
+  0% {
+    transform: translateY(5px) rotate(0deg); }
+  50% {
+    transform: translateY(0px) rotate(0deg); }
+  100% {
+    transform: translateY(0px) rotate(90deg); } }
+
+.home-content {
+  margin-top: -25px;
+  width: 100%;
+  background-color: black;
+  height: 64vh;
+  text-align: center; }
+  .home-content img {
+    float: right; }
+  .home-content p {
+    padding-top: 30px;
+    text-transform: uppercase;
+    color: yellow; }
+    .home-content p span {
+      text-transform: bold;
+      color: purple; }
+  .home-content .social-media {
+    color: purple;
+    margin-top: 90px; }
+    .home-content .social-media i {
+      display: inline;
+      text-align: center; }
+
+.roof {
+  background-color: black;
+  width: 100%;
+  height: 270vh;
+  /* Style inputs */
+  /* Style the container/contact section */
+  /* Create two columns that float next to eachother */
+  /* Clear floats after the columns */ }
+  .roof img {
+    width: 100%;
+    height: 85vh; }
+  .roof .roof-slogan {
+    position: relative;
+    width: 100%; }
+    .roof .roof-slogan p {
+      float: right;
+      height: 25vh;
+      width: 50%;
+      font-size: 30px;
+      color: yellow;
+      margin-top: -170px;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .roof .roof-slogan span {
+      font-size: 60px;
+      color: white; }
+  .roof .roof-content {
+    color: white;
+    margin-top: 100px;
+    margin-left: 40px; }
+    .roof .roof-content span {
+      color: purple;
+      font-size: 40px;
+      text-transform: bold; }
+    .roof .roof-content img {
+      padding-right: 30px;
+      float: right;
+      width: 30%;
+      margin-top: -170px; }
+    .roof .roof-content button {
+      width: 200px;
+      height: 50px;
+      border-radius: 6px;
+      margin-top: 30px;
+      background-color: yellow;
+      color: purple; }
+  .roof input[type=text], .roof select, .roof textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid yellow;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical; }
+  .roof .cont-section {
+    border-radius: 5px;
+    background-color: black;
+    margin-left: -20px;
+    margin-top: 60px; }
+    .roof .cont-section h2 {
+      margin-left: 20px; }
+    .roof .cont-section span {
+      color: purple; }
+    .roof .cont-section input, .roof .cont-section textarea {
+      background-color: black; }
+  .roof input[type=submit] {
+    background-color: purple;
+    color: white;
+    border-radius: 6px;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    width: 200px;
+    height: 50px; }
+  .roof input[type=submit]:hover {
+    transform: scale(1.2); }
+  .roof .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px; }
+  .roof .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .roof .social-reference {
+    margin-top: 170px;
+    width: 100%;
+    color: yellow; }
+    .roof .social-reference h1 {
+      color: purple; }
+    .roof .social-reference p {
+      margin-right: 90px; }
+    .roof .social-reference i {
+      color: yellow; }
+
+.connect {
+  width: 100%;
+  background-color: white; }
+  .connect img {
+    width: 100%;
+    height: 90vh; }
+  .connect .roof-slogan {
+    position: relative;
+    width: 100%; }
+    .connect .roof-slogan p {
+      float: right;
+      height: 15vh;
+      width: 50%;
+      font-size: 30px;
+      color: yellow;
+      margin-top: -170px;
+      background-color: rgba(0, 0, 0, 0.5); }
+    .connect .roof-slogan span {
+      font-size: 60px;
+      color: white; }
+  .connect .Booking-section {
+    width: 100%;
+    height: 100vh;
+    background-color: black; }
+    .connect .Booking-section h1, .connect .Booking-section p {
+      color: yellow;
+      margin-left: 50px;
+      padding-top: 30px; }
+    .connect .Booking-section .book-s {
+      width: 50%;
+      float: right;
+      height: 90vh; }
+      .connect .Booking-section .book-s img {
+        padding-top: 20px;
+        margin-left: 50px;
+        width: 60%;
+        height: 50%; }
+      .connect .Booking-section .book-s .b-button {
+        margin-top: 30px;
+        margin-left: 50px; }
+        .connect .Booking-section .book-s .b-button button {
+          background-color: purple;
+          border-radius: 4px;
+          width: 200px;
+          font-weight: bold;
+          font-size: 30px;
+          color: yellow;
+          border: none; }
+    .connect .Booking-section .enquire-s {
+      width: 50%;
+      height: 90vh;
+      /* Style inputs */
+      /* Style the container/contact section */
+      /* Create two columns that float next to eachother */
+      /* Clear floats after the columns */ }
+      .connect .Booking-section .enquire-s input[type=text], .connect .Booking-section .enquire-s select, .connect .Booking-section .enquire-s textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid yellow;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        margin-left: 50px;
+        resize: vertical;
+        background-color: black; }
+      .connect .Booking-section .enquire-s .cont-section {
+        border-radius: 5px;
+        background-color: black;
+        margin-left: -20px;
+        margin-top: 60px; }
+        .connect .Booking-section .enquire-s .cont-section h2 {
+          margin-left: 20px; }
+        .connect .Booking-section .enquire-s .cont-section span {
+          color: purple; }
+        .connect .Booking-section .enquire-s .cont-section input, .connect .Booking-section .enquire-s .cont-section textarea {
+          background-color: black; }
+      .connect .Booking-section .enquire-s input[type=submit] {
+        background-color: purple;
+        color: yellow;
+        border-radius: 6px;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+        width: 200px;
+        height: 50px;
+        margin-left: 50px; }
+      .connect .Booking-section .enquire-s input[type=submit]:hover {
+        transform: scale(1.2); }
+      .connect .Booking-section .enquire-s .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 20px; }
+      .connect .Booking-section .enquire-s .row:after {
+        content: "";
+        display: table;
+        clear: both; }
+  .connect .contact-details {
+    width: 100%;
+    height: 40vh;
+    text-align: justify;
+    font-weight: bold;
+    color: purple;
+    position: relative; }
+    .connect .contact-details h1, .connect .contact-details p {
+      margin-left: 50px; }
+    .connect .contact-details .s-icons {
+      margin-left: 50px;
+      font-size: 20px; }
+      .connect .contact-details .s-icons i {
+        color: purple; }
+    .connect .contact-details span {
+      color: puple; }
+    .connect .contact-details .box1 {
+      width: 50%;
+      height: 40vh;
+      float: right; }
+    .connect .contact-details .box2 {
+      width: 50%;
+      height: 40vh; }
+
+.google-map {
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: white; }
+  .google-map h1 {
+    margin-top: 35px;
+    font-weight: bold;
+    color: purple; }
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; }
+
+.front-view {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  background: cover; }
+
+/* Hide the images by default */
+.mySlides {
+  display: none; }
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none; }
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px; }
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 120px;
+  position: absolute;
+  bottom: 160px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3); }
+  .text span {
+    color: purple; }
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease; }
+
+.active, .dot:hover {
+  background-color: #717171; }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+
+.footer {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  background: #0e0e0e;
+  color: white;
+  height: 60px;
+  font-size: 15px; }
+  .footer p {
+    text-align: center; }
+
+@media screen and (max-width: 500px) {
+  .connect {
+    width: 100%; }
+    .connect .roof-slogan p {
+      font-size: 20px; }
+    .connect .roof-slogan span {
+      font-size: 30px; }
+    .connect .contact-details .box1, .connect .contact-details .box2 {
+      width: 100%;
+      font-size: 12px;
+      height: 30vh; }
+    .connect .Booking-section {
+      width: 100%;
+      margin-top: 100px;
+      height: 180vh; }
+      .connect .Booking-section h1 {
+        margin: 0px;
+        text-align: center; }
+      .connect .Booking-section .book-s, .connect .Booking-section .enquire-s {
+        width: 100%; }
+        .connect .Booking-section .book-s img, .connect .Booking-section .enquire-s img {
+          width: 100%;
+          margin: 0px; }
+    .connect .cont-section {
+      width: 100%;
+      text-align: center; }
+      .connect .cont-section .column, .connect .cont-section input[type=submit] {
+        width: 100%;
+        margin-top: 0; }
+    .connect .enquire-s .cont-section {
+      width: 100%;
+      text-align: center; }
+      .connect .enquire-s .cont-section .column, .connect .enquire-s .cont-section input[type=submit] {
+        width: 100%;
+        margin-top: 0; }
+      .connect .enquire-s .cont-section input[type=text], .connect .enquire-s .cont-section select, .connect .enquire-s .cont-section textarea {
+        margin-left: 15px; }
+      .connect .enquire-s .cont-section input[type=submit] {
+        margin-left: 15px; }
+  .front-view .text {
+    font-size: 35px;
+    bottom: 80px; }
+  .roof {
+    height: 400vh;
+    width: 100%; }
+    .roof .roof-slogan p {
+      font-size: 20px; }
+    .roof .roof-slogan span {
+      font-size: 30px; }
+    .roof .roof-content {
+      width: 100%;
+      box-sizing: border-box;
+      margin-left: 10px;
+      margin-top: 10px; }
+      .roof .roof-content p {
+        font-size: 13px; }
+      .roof .roof-content span {
+        font-size: 20px; }
+      .roof .roof-content button {
+        position: absolute;
+        text-align: center;
+        margin-left: 20px;
+        margin-top: 7px; }
+      .roof .roof-content img {
+        width: 100%;
+        height: auto;
+        margin-top: 14px; }
+    .roof .cont-section {
+      width: 100%;
+      text-align: center; }
+      .roof .cont-section .column, .roof .cont-section input[type=submit] {
+        width: 100%;
+        margin-top: 0; }
+    .roof .social-reference h1, .roof .social-reference i, .roof .social-reference p {
+      margin-left: 15px; }
+  .home-content {
+    width: 100%;
+    height: 80vh; }
+    .home-content img {
+      width: 100%; }
+    .home-content .social-media {
+      margin-top: 0px; } }
+
+@media screen and (max-width: 768px) {
+  .main-header .menu-icon {
+    display: block; }
+    .main-header .menu-icon__line {
+      animation: closedMid 0.8s backwards;
+      animation-direction: reverse; }
+      .main-header .menu-icon__line::before {
+        animation: closedTop 0.8s backwards;
+        animation-direction: reverse; }
+      .main-header .menu-icon__line::after {
+        animation: closedBtm 0.8s backwards;
+        animation-direction: reverse; }
+  .main-header .nav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10rem 0;
+    width: 100vw;
+    height: 100vh;
+    font-size: 2rem;
+    color: #fff;
+    background: #272727;
+    transition: opacity .8s .5s, clip-path 1s .5s;
+    clip-path: circle(200px at top right); }
+    .main-header .nav-links .nav-link {
+      opacity: 0;
+      transform: translateX(100%);
+      width: 100%;
+      text-align: center; }
+      .main-header .nav-links .nav-link a {
+        display: block;
+        padding: 2rem 0; }
+  .main-header .menu-btn:checked ~ .nav-links {
+    opacity: 1;
+    clip-path: circle(100% at center); }
+    .main-header .menu-btn:checked ~ .nav-links .nav-link {
+      opacity: 1;
+      transform: translateX(0);
+      transition: opacity 0.4s ease-in-out, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+      .main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(1) {
+        transition-delay: .7s; }
+      .main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(2) {
+        transition-delay: .8s; }
+      .main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(3) {
+        transition-delay: .9s; }
+      .main-header .menu-btn:checked ~ .nav-links .nav-link:nth-of-type(4) {
+        transition-delay: 1s; }
+  .main-header .menu-btn:checked ~ .menu-icon {
+    border-radius: 50%;
+    animation: pulse 1s; }
+    .main-header .menu-btn:checked ~ .menu-icon .menu-icon__line {
+      background: #fff;
+      animation: openMid 0.8s forwards; }
+      .main-header .menu-btn:checked ~ .menu-icon .menu-icon__line::before {
+        background: #fff;
+        animation: openTop 0.8s forwards; }
+      .main-header .menu-btn:checked ~ .menu-icon .menu-icon__line::after {
+        background: #fff;
+        animation: openBtm 0.8s forwards; } }
+
+@media screen and (min-width: 501px) and (max-width: 769px) {
+  .front-view .text {
+    font-size: 70px;
+    bottom: 80px; }
+  .roof {
+    height: 230vh; }
+    .roof .roof-slogan p {
+      font-size: 30px; }
+    .roof .roof-slogan span {
+      font-size: 40px; }
+    .roof .social-reference h1, .roof .social-reference i, .roof .social-reference p {
+      margin-left: 15px; }
+  .home-content {
+    background-color: rgba(128, 0, 128, 0.5);
+    height: 90vh; }
+    .home-content img {
+      width: 100%; }
+    .home-content .p {
+      padding: 1rem; }
+    .home-content .social-media {
+      margin-top: 20px; } }
+
+@media screen and (min-width: 770px) and (max-width: 1025px) {
+  .roof {
+    height: 180vh; }
+  .home-content {
+    height: 110vh; }
+    .home-content img {
+      width: 100%; }
+    .home-content .social-media {
+      margin-top: 0px; } }
+
+@media screen and (min-width: 1281px) {
+  .home-content {
+    height: 50vh; }
+  .roof {
+    height: 200vh; } }

@@ -1,0 +1,37 @@
+.home-content{
+   
+    margin-top: -25px;
+    width:100%;
+    background-color: black;
+    height: 64vh;
+  text-align: center;
+
+    img{
+
+        
+        float:right;
+    }
+
+    p{
+        padding-top: 30px;
+       
+        text-transform: uppercase;
+        color:yellow;
+        span{
+            text-transform: bold;
+            color:purple;
+        }
+
+    }
+
+    .social-media
+     {
+        color:purple;
+        margin-top: 90px;
+        
+       i{
+        display: inline;
+        text-align: center;
+    }
+ }
+}

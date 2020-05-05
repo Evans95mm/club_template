@@ -1,0 +1,28 @@
+.desrc {
+  margin-top: -25px;
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-color: rgba(128, 0, 128, 0.5); }
+  .desrc .font-message {
+    position: absolute;
+    width: 50%;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 2rem auto;
+    text-align: center;
+    color: yellow; }
+    .desrc .font-message span {
+      color: purple; }
+  .desrc .icons {
+    position: absolute;
+    margin: 15rem 0;
+    width: 50%;
+    height: 10vh;
+    font-size: 25px;
+    z-index: 1;
+    text-align: center; }
+    .desrc .icons i {
+      color: purple; }
+  .desrc img {
+    float: right; }
